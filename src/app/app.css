@@ -1,0 +1,112 @@
+body{
+
+    background-color: rgb(227, 225, 225);
+    margin: 0;
+    /* min-height: 100vh;
+    align-content: center; */
+
+    
+}
+
+.container{
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.search-box{
+    /* position:relative; */
+    width: 100%;
+    max-width: 950px;
+    /* height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    overflow: hidden; */
+    margin: 0 auto 30px auto;
+}
+
+.search-box input{
+   width: 100%;
+   padding: 14px;
+   border-radius: 8px;
+   border: solid rgb(204, 204, 204, 100);
+}
+
+.course-grid{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(307px, 1fr)); */
+    grid-template-columns: repeat(3, 307px);
+    /* grid-template-rows: 247px 247px 247px; */
+    gap: 20px;
+    justify-content: center;
+    /* padding: 40px; */
+}
+
+.card-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    /* width: 307px;
+    height: 247px; */
+    /* position: relative; */
+    background-color: rgba(230, 230, 230, 0.94);
+    border: solid rgb(219, 219, 219, 100);
+    border-radius: 20px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+    gap: 20px;
+}
+.card:hover{
+    transform: scale(0.8);
+    transition-duration: 1s;
+}
+
+.card img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-position: center;
+    object-fit: cover;
+    /* margin-top: 30px; */
+}
+
+.category{
+    font-family: sans-serif;
+    font-size: 13px;
+    color:     rgb(153, 153, 153);
+    letter-spacing: -0.01em;
+} 
+
+h3{
+    font-family: "Inter Variable", "Inter Variable Placeholder", sans-serif;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: -0.02em;
+    line-height: 1em;
+    margin-top: 5px;
+}
+
+@media (max-width: 1199px) {
+    .course-grid{
+        grid-template-columns: repeat(2, 307px);
+    }
+}
+
+@media (max-width: 799px) {
+    .course-grid{
+        grid-template-columns: repeat(1, 307px);
+        max-width: 307px;
+        margin: 0 auto;
+    }
+    .card{
+        width: 100%;
+    }
+}
